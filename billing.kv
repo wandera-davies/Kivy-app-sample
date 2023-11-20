@@ -1,0 +1,45 @@
+MDScreen:
+    name: "billing"
+    MDFloatLayout:
+        md_bg_color:1, 1, 1, 1
+        Image:
+            source: "images/logo.png"
+            size_hint: .8 ,.8
+            pos_hint: {"center_x": .5,"center_y": .9}
+        Image:
+            source: "images/c.jpg"
+            size_hint: .9 ,.4
+            pos_hint: {"center_x": .5,"center_y": .68}
+
+    MDTextField:
+        hint_text: 'Bill No.'
+        size_hint: 0.53, None
+        size_hint_x: 0.53
+        height: "30dp"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+
+    MDTextField:
+        hint_text: 'Location'
+        size_hint: 0.53, None
+        size_hint_x: 0.53
+        height: "30dp"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+
+    MDTextField:
+        hint_text: 'Payment Method'
+        size_hint: 0.53, None
+        size_hint_x: 0.53
+        height: "30dp"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.25}
+    Button:
+        text: "Confirm Order"
+        size_hint: .4, .065
+        background_color: rgba(0, 255, 0, 255)
+        pos_hint: {"center_x": .5,"center_y": .15}
+    MDLabel:
+        text: "Bill Details"
+        size_hint: .6, .065
+        font_size: "23sp"
+        color: "green"
+        pos_hint: {"center_x": .28,"center_y": .84}
+        halign: "center"

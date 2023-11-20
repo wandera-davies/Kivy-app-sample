@@ -1,0 +1,79 @@
+MDScreen:
+    name: "home"
+    MDFloatLayout:
+        md_bg_color:1, 1, 1, 1
+        Image:
+            source: "images/logo.png"
+            size_hint: .8 ,.8
+            pos_hint: {"center_x": .5,"center_y": .9}
+        Image:
+            source: "images/w.jpg"
+            size_hint: .9 ,.9
+            pos_hint: {"center_x": .5,"center_y": .65}
+    MDLabel:
+        text: "For all kinds of classic footwear"
+        font_size: "18sp"
+        halign: "center"
+        pos_hint: {"center_y": .42}
+    Button:
+        text: "LOGIN"
+        size_hint: .4, .065
+        background_color: rgba(0, 255, 0, 255)
+        pos_hint: {"center_x": .5,"center_y": .33}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "login"
+    Button:
+        text: "SIGN UP"
+        size_hint: .4, .065
+        background_color: rgba(255, 0, 0, 255)
+        pos_hint: {"center_x": .5,"center_y": .25}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "signup"
+
+    MDLabel:
+        text: "or"
+        color: rgba (255, 165, 0, 255)
+        pos_hint: {"center_y": .2}
+        font_size: "18sp"
+        halign: "center"
+    MDFloatLayout:
+        md_bg_color: rgba(178,178,178,255)
+        size_hint: .3, .002
+        pos_hint: {"center_x": .3, "center_y": .2}
+    MDFloatLayout:
+        md_bg_color: rgba(178,178,178,255)
+        size_hint: .3, .002
+        pos_hint: {"center_x": .7, "center_y": .2}
+    MDLabel:
+        text: "Social Media Login"
+        pos_hint: {"center_y": .15}
+        font_size: "18sp"
+        halign: "center"
+
+    MDIconButton:
+        pos_hint: {'center_x': 0.3, 'center_y': 0.08}
+        icon: 'facebook'
+        theme_text_color:'Custom'
+        text_color: 1,1,1,1
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+        md_bg_color: 85/255, 172/255, 238/255
+    MDIconButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.08}
+        icon: 'google-chrome'
+        theme_text_color:'Custom'
+        text_color:  1, 0, 0, 1
+        md_bg_color: 251/255, 188/255, 5/255
+        icon_right: 'close-circle-outline'
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+    MDIconButton:
+        pos_hint: {'center_x': 0.7, 'center_y': 0.08}
+        icon: 'apple'
+        theme_text_color:'Custom'
+        text_color: 1,1,1,1
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+        md_bg_color: 0,0,0,1

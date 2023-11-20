@@ -1,0 +1,119 @@
+MDScreen:
+    name: "login"
+
+    MDIconButton:
+        pos_hint: {'center_x': 0.1, 'center_y': 0.95}
+        icon: 'arrow-left'
+        icon_right: 'close-circle-outline'
+        md_bg_color: 255/255, 165/255, 0
+        user_font_size: '100sp'
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "home"
+    FloatLayout:
+        MDIconButton:
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            icon: 'lock-open-outline'
+            icon_right: 'close-circle-outline'
+            md_bg_color: 255/255, 165/255, 0
+            user_font_size: '100sp'
+        MDLabel:
+            text: "W e l c o m e !"
+            color: rgba (255, 165, 0, 255)
+            font_size: "26sp"
+            pos_hint: {"center_x":0.8, "center_y":0.9}
+            color: 1,0.7,0
+        MDLabel:
+            text: "Sign in to continue"
+            font_size: "17sp"
+            pos_hint: {"center_x":0.8, "center_y":0.7}
+
+
+        MDTextField:
+            id: email
+            hint_text: 'Email'
+            size_hint: 0.53, None
+            size_hint_x: 0.53
+            height: "30dp"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+        MDTextField:
+            id: password
+            hint_text: 'Password'
+            size_hint: 0.53, None
+            size_hint_x: 0.53
+            height: "30dp"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            multiline: False
+            password: True
+
+        MDRaisedButton:
+            text: '        LOGIN        '
+            pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+            on_release: app.send_data(email,password)
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "shoes"
+        MDLabel:
+            text: "Forgot Password?"
+            color: rgba (255, 165, 0, 255)
+            pos_hint: {"center_y": .3}
+            font_size: "16sp"
+            halign: "center"
+        MDLabel:
+            text: "or"
+            color: rgba (255, 165, 0, 255)
+            pos_hint: {"center_y": .25}
+            font_size: "18sp"
+            halign: "center"
+        MDFloatLayout:
+            md_bg_color: rgba(178,178,178,255)
+            size_hint: .3, .002
+            pos_hint: {"center_x": .3, "center_y": .25}
+        MDFloatLayout:
+            md_bg_color: rgba(178,178,178,255)
+            size_hint: .3, .002
+            pos_hint: {"center_x": .7, "center_y": .25}
+        MDLabel:
+            text: "Social Media Login"
+            pos_hint: {"center_y": .2}
+            font_size: "18sp"
+            halign: "center"
+        MDLabel:
+            text: "Don't have an account"
+            pos_hint: {"center_x": .38, "center_y": .03}
+            font_size: "16sp"
+            halign: "center"
+
+        MDLabel:
+            text: "Sign up"
+            font_size: "15sp"
+            halign: "center"
+            pos_hint: {"center_x": .7, "center_y": .03}
+            color: rgba (255, 165, 0, 255)
+    MDIconButton:
+        pos_hint: {'center_x': 0.3, 'center_y': 0.12}
+        icon: 'facebook'
+        theme_text_color:'Custom'
+        text_color: 1,1,1,1
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+        md_bg_color: 85/255, 172/255, 238/255
+    MDIconButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.12}
+        icon: 'google-chrome'
+        theme_text_color:'Custom'
+        text_color:  1, 0, 0, 1
+        md_bg_color: 251/255, 188/255, 5/255
+        icon_right: 'close-circle-outline'
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+    MDIconButton:
+        pos_hint: {'center_x': 0.7, 'center_y': 0.12}
+        icon: 'apple'
+        theme_text_color:'Custom'
+        text_color: 1,1,1,1
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+        md_bg_color: 0,0,0,1
+

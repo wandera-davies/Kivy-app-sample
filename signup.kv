@@ -1,0 +1,117 @@
+MDScreen:
+    name: "signup"
+
+    MDIconButton:
+        pos_hint: {'center_x': 0.1, 'center_y': 0.95}
+        icon: 'arrow-left'
+        icon_right: 'close-circle-outline'
+        md_bg_color: 255/255, 165/255, 0
+        user_font_size: '100sp'
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "home"
+    FloatLayout:
+    MDIconButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+        icon: 'lock-open-outline'
+        icon_right: 'close-circle-outline'
+        md_bg_color: 255/255, 165/255, 0
+        user_font_size: '100sp'
+    MDLabel:
+        text: "H i !"
+        font_size: "26sp"
+        pos_hint: {"center_x":0.93, "center_y":0.9}
+        color: 1,0.7,0
+    MDLabel:
+        text: "Create a new account"
+        color: rgba (255, 165, 0, 255)
+        font_size: "17sp"
+        pos_hint: {"center_x":0.8, "center_y":0.7}
+
+
+    MDTextField:
+        hint_text: 'Email'
+        size_hint: 0.53, None
+        size_hint_x: 0.53
+        height: "30dp"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+    MDTextField:
+        hint_text: 'Password'
+        size_hint: 0.53, None
+        size_hint_x: 0.53
+        height: "30dp"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        multiline: False
+        password: True
+
+    MDTextField:
+        hint_text: 'Confirm password'
+        size_hint: 0.53, None
+        size_hint_x: 0.53
+        height: "30dp"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        multiline: False
+        password: True
+
+    MDRaisedButton:
+        text: '        SIGN UP        '
+        pos_hint: {'center_x': 0.5, 'center_y': 0.32}
+
+    MDLabel:
+        text: "or"
+        color: rgba (255, 165, 0, 255)
+        pos_hint: {"center_y": .25}
+        font_size: "18sp"
+        halign: "center"
+    MDFloatLayout:
+        md_bg_color: rgba(178,178,178,255)
+        size_hint: .3, .002
+        pos_hint: {"center_x": .3, "center_y": .25}
+    MDFloatLayout:
+        md_bg_color: rgba(178,178,178,255)
+        size_hint: .3, .002
+        pos_hint: {"center_x": .7, "center_y": .25}
+    MDLabel:
+        text: "Social Media Login"
+        pos_hint: {"center_y": .2}
+        font_size: "18sp"
+        halign: "center"
+    MDLabel:
+        text: "Already have an account "
+        pos_hint: {"center_x": .38, "center_y": .03}
+        font_size: "16sp"
+        halign: "center"
+
+    MDLabel:
+        text: "Sign in"
+        font_size: "15sp"
+        halign: "center"
+        pos_hint: {"center_x": .7, "center_y": .03}
+        color: rgba (255, 165, 0, 255)
+
+    MDIconButton:
+        pos_hint: {'center_x': 0.3, 'center_y': 0.12}
+        icon: 'facebook'
+        theme_text_color:'Custom'
+        text_color: 1,1,1,1
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+        md_bg_color: 85/255, 172/255, 238/255
+    MDIconButton:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.12}
+        icon: 'google-chrome'
+        theme_text_color:'Custom'
+        text_color: 1,0,0,1
+        md_bg_color: 251/255, 188/255, 5/255
+        icon_right: 'close-circle-outline'
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+    MDIconButton:
+        pos_hint: {'center_x': 0.7, 'center_y': 0.12}
+        icon: 'apple'
+        theme_text_color:'Custom'
+        text_color: 1,1,1,1
+        icon_right: 'close-circle-outline'
+        user_font_size: '100sp'
+        md_bg_color: 0,0,0,1
